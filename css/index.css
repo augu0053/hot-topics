@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oswald:wght@200..700&display=swap');
+
+/* Color scheme (analogous) */
+:root {
+    --primary-color: #7a5808;
+    --secondary-color: #ceb41e;
+    --accent-color: #f5f1e9;
+}
+
+/* Global Styles */
+body {
+    font-family: "Lato", sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: var(--accent-color);
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+}
+
+
+.tag {
+    color: var(--primary-color);
+    font-family: "Merriweather", serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Nav-bar */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 3em;
+}
+
+nav ul li {
+    display: block;
+    margin: 1em auto;
+    text-align: center;
+    background-color: var(--secondary-color);
+    border-radius: 0.2em;
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* Masthead */
+.masthead {
+    display: none;
+}
+
+/* .masthead {
+    background: linear-gradient(rgba(61, 54, 37, 0.8), rgba(0, 0, 0, 0.3)), url('../img/masthead.jpg');
+    background-size: cover;
+    padding: 2rem;
+    color: var(--accent-color);
+    text-align: center;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* Home */
+.article {
+    margin: 1em 3em;
+    overflow: hidden;
+}
+
+.article figure {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    margin: 1em auto;
+    font-weight: 600;
+}
+
+
+.article figcaption {
+    color: #7a5808;
+}
+
+.article h1 {
+    font-family: "Merriweather", serif;
+    font-size: 0.75rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin: 2em 0 0.5em;
+}
+
+.article p {
+    text-align: justify;
+    font-size: 0.75rem;
+}
+
+hr {
+    margin: auto;
+    max-width: 70em;
+}
+
+.port {
+    font-family: "Merriweather", serif;
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-grid figure {
+    margin: 1em 3em;
+}
+
+.portfolio-grid {
+    font-family: "Merriweather", serif;
+    text-align: center;
+    margin: auto;
+    color: #7a5808;
+    font-weight: 600;
+}
+
+.portfolio-grid figure img {
+    width: 100%;
+    max-width: 300px;
+    object-fit: contain;
+    border-radius: 0.3em ;
+}
+
+/* Footer */
+footer {
+    clear: both;
+    background-color: var(--primary-color);
+    color: var(--accent-color);
+    text-align: center;
+    padding: 2em;
+
+
+}
+
+.social-media a {
+    margin: 0 0.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* Media Queries */
+@media (min-width: 35em) and (max-width: 80em) {
+    body {
+        font-size: 1rem;
+    }
+
+    .tag {
+        display: none;
+    }
+
+    /* Nav-bar */
+    header {
+        margin: auto;
+        max-width: 60em;
+    }
+    nav ul {
+        display: flex;
+        margin: 2em;
+        max-width: 60em;
+    }
+
+    nav ul li {
+
+        margin: 0 1em;
+        width: 100%;
+    }
+
+    .masthead {
+        background: linear-gradient(rgba(61, 54, 37, 0.8), rgba(0, 0, 0, 0.3)), url('../img/masthead.jpg');
+        background-size: cover;
+        padding: 2rem;
+        font-family: "Merriweather", serif;
+        color: var(--accent-color);
+        text-align: center;
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+
+    /* Home */
+    #content {
+        margin: 0 auto;
+        max-width: 60em;
+    }
+
+    .article {
+        clear: both;
+
+    }
+
+    .article h1 {
+        font-family: "Merriweather", serif;
+        font-size: 1rem;
+        color: var(--primary-color);
+        text-align: center;
+        margin: 0;
+        margin: 2em 0 0 0;
+    }
+
+    .article img {
+        width: 100%;
+        float: left;
+    }
+
+    .article figure {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        float: left;
+        margin: 1em 1em 1em 0;
+        color: var(--primary-color);
+        border-radius: 0.3em ;
+    }
+
+    .article p {
+        font-size: 1rem;
+    }
+
+    .port {
+        font-family: "Merriweather", serif;
+        color: var(--primary-color);
+        display: flex;
+        justify-content: center;
+        margin: 1em 5em;
+        
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-areas:
+            "one two"
+            "three four"
+            "five six";
+        margin: 2em;
+    }
+
+    .card1 {
+        grid-area: one;
+    }
+
+    .card2 {
+        grid-area: two;
+    }
+
+    .card3 {
+        grid-area: three;
+    }
+
+    .card4 {
+        grid-area: four;
+    }
+
+    .card5 {
+        grid-area: five;
+    }
+
+    .card6 {
+        grid-area: six;
+    }
+
+    figcaption {
+        font-size: 1rem;
+    }
+
+}
+
+@media (min-width: 80em) {
+    body {
+        font-size: 1.25rem;
+    }
+
+    .tag {
+        display: none;
+    }
+
+    header {
+        display: flex;
+        margin: auto;
+        max-width: 70em;
+    }
+
+    /* Nav-bar */
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 0 1em;
+        width: 100%;
+        padding: 0 3em;
+    }
+
+    .masthead {
+        background: linear-gradient(rgba(61, 54, 37, 0.8), rgba(0, 0, 0, 0.3)), url('../img/masthead.jpg');
+        background-size: cover;
+        padding: 2rem;
+        color: var(--accent-color);
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+
+    }
+
+    .masthead h1 {
+        font-family: "Merriweather", serif;
+        max-width: 70em;
+        text-align: left;
+        margin: 6%;
+    }
+
+    /* Home */
+    #content {
+        margin: auto;
+        max-width: 70em;
+    }
+
+    .article {
+        clear: both;
+        max-width: 70em;
+        /* width: 100%; */
+    }
+
+    .article h1 {
+        font-family: "Merriweather", serif;
+        font-size: 1.25rem;
+        color: var(--primary-color);
+        text-align: center;
+        margin: 0;
+        padding: 2em 0 1em 0;
+    }
+
+    .article img {
+        width: 100%;
+        float: left;
+        margin: 0 2em 0 0;
+        border-radius: 0.2em;
+    }
+
+    .article figure {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        float: left;
+        margin: 1em 1em 1em 0;
+        color: var(--primary-color);
+    }
+
+    .article p {
+        font-size: 1.25rem;
+
+    }
+
+    .port {
+        color: var(--primary-color);
+        display: flex;
+        justify-content: start;
+        margin: 1em 3em;
+    }
+
+    .portfolio-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "one two three"
+            "four five six";
+        text-align: center;
+        margin: auto;
+        max-width: 70em;
+    }
+
+    .card1 {
+        grid-area: one;
+    }
+
+    .card2 {
+        grid-area: two;
+    }
+
+    .card3 {
+        grid-area: three;
+    }
+
+    .card4 {
+        grid-area: four;
+    }
+
+    .card5 {
+        grid-area: five;
+    }
+
+    .card6 {
+        grid-area: six;
+    }
+
+    figcaption {
+        font-family: "Merriweather", serif;
+        font-size: 1.25rem;
+    }
+}
